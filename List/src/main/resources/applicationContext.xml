@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+
+    <bean id="fruitShop" class="com.list.demo.FruitShop">
+
+        <constructor-arg type="String" value="Fruit Mart"></constructor-arg>
+        <constructor-arg type="java.util.List">
+            <list>
+                <value>apple</value>
+                <value>pineapple</value>
+                <value>orange</value>
+            </list>
+        </constructor-arg>
+        
+        
+
+    </bean>
+
+
+<bean id="fruitset" class="com.list.demo.FruitShop">
+
+        <constructor-arg type="String" value="Fruit Mart"></constructor-arg>
+        <constructor-arg type="java.util.Set">
+            <set>
+                <value>apple</value>
+                <value>pineapple</value>
+                <value>orange</value>
+           </set>
+        </constructor-arg>
+        
+        
+
+    </bean>
+
+
+<bean id="fruit" class="com.list.demo.FruitShop">
+
+        <constructor-arg type="String" value="Fruit Mart"></constructor-arg>
+        <constructor-arg type="java.util.Properties">
+           <props>
+				<prop key="admin">admin@nospam.com</prop>
+				<prop key="support">support@nospam.com</prop>
+			</props>
+        </constructor-arg>
+        
+        
+
+    </bean>
+    
+   
+</beans>
