@@ -13,7 +13,7 @@ import com.bridgelabz.transaction.service.EmployeeService;
 
 @RestController
 @RequestMapping("/")
-public class MainController {
+public class Controller {
 
 	@Autowired
 	private EmployeeService empSer;
@@ -26,14 +26,10 @@ public class MainController {
 	
 	@Autowired
 	private Employee emp;
-	
-	@RequestMapping("/check")
-	public String checkData() {
-		return "Working fine... go on!!!";
-	}
+
 	
 	
-	@Transactional(dontRollbackOn=NumberFormatException.class)
+	@Transactional(dontRollbackOn  = NumberFormatException.class)
 	@RequestMapping("/setData")
 	public String setData(){
 		add.setDetails("Vizag");
@@ -46,6 +42,10 @@ public class MainController {
 		
 		addSer.saveAddress(add);
 
+//		int a=0;
+//		if(a==0) {
+//			throw new NumberFormatException();
+//		}
 		empSer.saveEmployee(emp);
 		
 		return "Data Inserted";
