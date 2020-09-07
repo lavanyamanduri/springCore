@@ -1,0 +1,41 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<beans xmlns = "http://www.springframework.org/schema/beans"
+     xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+     xmlns:context = "http://www.springframework.org/schema/context"
+     xsi:schemaLocation = "http://www.springframework.org/schema/beans
+     http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+     http://www.springframework.org/schema/context
+     http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+<context:annotation-config/>
+
+
+	<!-- Config without xml 
+	
+<bean id = "person" class ="com.bridgelabz.qualifier.withxml.Person">
+	   <property name = "name" value = "Sujan" />
+       <property name = "age" value = "20"/>
+       <property name = "department" value = "cse"/>
+
+</bean>  -->
+
+
+	<!--  profile bean -->
+	
+	<bean id = "profile" class = "com.bridgelabz.qualifier.withxml.Profile"></bean>
+
+	<!--  student1 bean -->
+	
+	<bean id = "student" class = "com.bridgelabz.qualifier.withxml.Student">
+       <property name = "name" value = "Sujan" />
+       <property name = "age" value = "20"/>
+       <property name = "branch" value = "cse"/>
+     </bean>
+     
+     <!--  student2 bean -->
+	<bean id = "student2" class = "com.bridgelabz.qualifier.withxml.Student">
+            <property name = "name" value = "Nuha" />
+            <property name = "age" value = "20"/>
+             <property name = "branch" value = "ece"/>
+      </bean>
+     
+</beans>
